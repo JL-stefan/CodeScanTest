@@ -6,8 +6,8 @@ def get_user_by_username(username):
     cursor = conn.cursor()  
       
     # 这里的SQL查询存在SQL注入漏洞  
-    query = f"SELECT * FROM users WHERE username = '{username}'"  
-    cursor.execute(query)  
+    query = "SELECT * FROM users WHERE username = ?"
+    cursor.execute(query, (username,))
       
     result = cursor.fetchone()  
     conn.close()  
