@@ -21,7 +21,7 @@ BEGIN
     WHERE ID = 2;  
   
     -- 提交事务  
-    COMMIT TRANSACTION;  
+    -- COMMIT TRANSACTION;  
 END;  
 GO  
   
